@@ -1,0 +1,9 @@
+{
+	"git.ignoreLimitWarning": true,
+	"appService.zipIgnorePattern": [
+		"node_modules{,/**}",
+		".vscode{,/**}"
+	],
+	"appService.defaultWebAppToDeploy": "/subscriptions/2e40573e-b02f-4874-ba7c-2dc294d255d2/AppServices/subscriptions/2e40573e-b02f-4874-ba7c-2dc294d255d2/resourceGroups/nicpad/providers/Microsoft.Web/sites/register-nicpad",
+	"appService.deploySubpath": "."
+}

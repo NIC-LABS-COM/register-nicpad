@@ -1,0 +1,66 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.f" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" controllerName="sap.ui.demo.todo.controller.PersonEdit" displayBlock="false">
+    <Page id="pagePersonEdit" showNavButton="true" navButtonPress=".onNavBack">
+        <headerContent>
+            <Button id="buttonCancel" text="{i18n>buttonCancel}" press="onCancel" icon="sap-icon://decline" type="Transparent" />
+            <Button id="buttonSave" text="{i18n>buttonSave}" press="onSave" icon="sap-icon://save" type="Transparent" />
+        </headerContent>
+        <content>
+            <VBox class="sapUiSmallMargin" fitContainer="false" justifyContent="Center" alignItems="Center" alignContent="Center">
+                <Title level="H1" text="{i18n>titleRegister}" />
+                <form:SimpleForm id="SimpleFormDisplay354">
+                    <form:content>
+                        <Input id="inputPersonName" value="{personModel>/name}" placeholder="{i18n>placeHolderFirstName}" maxLength="255" width="16rem" />
+                        <Input id="inputBirth" value="{personModel>/birth}" type="Date" maxLength="35" submit="onRegister" width="16rem" required="true" />
+                        <MaskInput id="maskInputCpf" value="{personModel>/cpf}" mask="999.999.999-99" placeholderSymbol="_" placeholder="CPF" width="16rem" />
+                        <MaskInput id="inputRg" value="{personModel>/rg}" submit="onRegister" mask="MG-99.999.999" placeholder="RG" placeholderSymbol="_" width="16rem" required="true" />
+
+                        <MaskInput id="inputPhone" value="{personModel>/phone}" type="Number" maxLength="10" submit="onRegister" mask="+55 (99) 99999-9999" placeholder="Telefone" placeholderSymbol="_" width="16rem" required="true" />
+
+                        <MaskInput id="inputZipCode" value="{personModel>/zipCode}" maxLength="8" submit="onRegister" mask="99.999-999" placeholder="CEP" placeholderSymbol="_" width="16rem" required="true" />
+                        <Input id="inputAddres" value="{personModel>/addres}" maxLength="255" submit="onRegister" placeholder="Endereço Completo" width="16rem" required="true" />
+
+                        <Input id="inputUser" value="{personModel>/user}" type="text" submit="onRegister" placeholder="{i18n>placeHolderUser}" width="16rem" required="true" />
+
+                        <Input id="inputUserCheck" value="{personModel>/userCheck}" type="Email" submit="onRegister" placeholder="{i18n>placeHolderUserCheck}" width="16rem" required="true" />
+
+                        <Input id="inputOffice" value="{personModel>/office}" submit="onRegister" placeholder="{i18n>placeHolderOffice}" width="16rem" required="true" />
+
+                        <Select id="selectPerson" value="{personModel>/person}" width="16rem" items="" name="">
+                            <core:Item key="" text="" />
+                            <core:Item key="" text="Interno" />
+                            <core:Item key="" text="Externo" />
+                            <core:Item key="" text="Outros" />
+                        </Select>
+                        <Select id="selectModule" value="{personModel>/module}" width="16rem" items="" name="">
+                            <core:Item key="" text="" />
+                            <core:Item key="" text="SD" />
+                            <core:Item key="" text="FI" />
+                            <core:Item key="" text="CO" />
+                            <core:Item key="" text="MM" />
+                            <core:Item key="" text="EHS" />
+                            <core:Item key="" text="PP" />
+                            <core:Item key="" text="TR" />
+                            <core:Item key="" text="PA" />
+                            <core:Item key="" text="PR" />
+                            <core:Item key="" text="PY" />
+                            <core:Item key="" text="PT" />
+                            <core:Item key="" text="WM" />
+                            <core:Item key="" text="QM" />
+                            <core:Item key="" text="LE" />
+                            <core:Item key="" text="CS" />
+                            <core:Item key="" text="RE" />
+                        </Select>
+
+                        <Input id="inputProject" value="{personModel>/project}" type="text" submit="onRegister" placeholder="{i18n>placeHolderProject}" width="16rem" required="true" />
+
+                        <Input id="inputManager" value="{personModel>/manager}" type="text" submit="onRegister" placeholder="{i18n>placeHolderManager}" width="16rem" required="true" />
+
+                        <Input id="inputWorkplace" value="{personModel>/workplace}" type="text" submit="onRegister" placeholder="{i18n>placeHolderWorkplace}" width="16rem" required="true" />
+
+                        <Input id="inputSapID" value="{personModel>/sapID}" type="text" submit="onRegister" placeholder="{i18n>placeHolderSapID}" width="16rem" required="true" />
+                    </form:content>
+                </form:SimpleForm>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
