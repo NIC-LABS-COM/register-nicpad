@@ -1,41 +1,53 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.f" controllerName="sap.ui.demo.todo.controller.PersonList" displayBlock="false">
-	<Page title="{i18n>personListTitle}" showNavButton="true" navButtonPress=".onNavBack">
-		<content>
-			<f:DynamicPage>
-				<f:header>
-					<f:DynamicPageHeader pinnable="false"></f:DynamicPageHeader>
-				</f:header>
-				<f:content>
-					<Table id="personTable" items="{path: '/Person',sorter: {path: 'name'}
+    <Page title="{i18n>personListTitle}" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <f:DynamicPage>
+                <f:header>
+                    <f:DynamicPageHeader pinnable="false" />
+                </f:header>
+                <f:content>
+                    <Table id="personTable" items="{path: '/Person',sorter: {path: 'name'}
 					}" width="auto" mode="MultiSelect" growing="true" growingThreshold="15" growingScrollToLoad="true">
-						<headerToolbar>
-							<Toolbar>
-								<Title id="tableHeader" text="{i18n>personTableTitle}" />
-								<ToolbarSpacer />
-								<Button id="buttonAddPerson" icon="sap-icon://add" press="onAddPerson" />
-								<Button id="buttonEditPerson" icon="sap-icon://edit" press="onEditPerson" />
-								<Button id="buttonDeletePerson" icon="sap-icon://delete" press="onDeletePerson" />
-							</Toolbar>
-						</headerToolbar>
-						<columns>
-							<Column id="columnName">
-								<Text id="columnTextName" text="{i18n>columnTextPersonName}" />
-							</Column>
-							<Column id="columnCpf" hAlign="End">
-								<Text id="columnTextCpf" text="{i18n>columnTextPersonCPF}" />
-							</Column>
-						</columns>
-						<items>
-							<ColumnListItem press=".onPress">
-								<cells>
-									<ObjectIdentifier id="oiName" title="{name}" />
-									<ObjectAttribute id="oaCpf" text="{cpf}" />
-								</cells>
-							</ColumnListItem>
-						</items>
-					</Table>
-				</f:content>
-			</f:DynamicPage>
-		</content>
-	</Page>
+                        <headerToolbar>
+                            <Toolbar>
+                                <Title id="tableHeader" text="{i18n>personTableTitle}" />
+                                <ToolbarSpacer />
+                                <Button id="buttonAddPerson" icon="sap-icon://add" press="onAddPerson" />
+                                <Button id="buttonEditPerson" icon="sap-icon://edit" press="onEditPerson" />
+                                <Button id="buttonDeletePerson" icon="sap-icon://delete" press="onDeletePerson" />
+                            </Toolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column id="columnName">
+                                <Text id="columnTextName" text="{i18n>columnTextPersonName}" />
+                            </Column>
+                            <Column id="columnOffice">
+                                <Text id="columnTextOffice" text="{i18n>columnTextOffice}" />
+                            </Column>
+                            <Column id="columnPerson">
+                                <Text id="columnTextPerson" text="{i18n>columnTextPerson}" />
+                            </Column>
+                            <Column id="columnModule">
+                                <Text id="columnTextModule" text="{i18n>columnTextModule}" />
+                            </Column>
+                            <Column id="columnCpf" hAlign="end">
+                                <Text id="columnTextCpf" text="{i18n>columnTextPersonCPF}" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem press=".onPress">
+                                <cells>
+                                    <ObjectIdentifier id="oiName" title="{name}" />
+                                    <ObjectAttribute id="oaOffice" text="{office}" />
+                                    <ObjectAttribute id="oaPerson" text="{person}" />
+                                    <ObjectAttribute id="oaModule" text="{module}" />
+                                    <ObjectAttribute id="oaCpf" text="{cpf}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </f:content>
+            </f:DynamicPage>
+        </content>
+    </Page>
 </mvc:View>

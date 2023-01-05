@@ -24,14 +24,16 @@
                         <Input id="inputUserCheck" value="{personModel>/userCheck}" type="Email" submit="onRegister" placeholder="{i18n>placeHolderUserCheck}" width="16rem" required="true" />
 
                         <Input id="inputOffice" value="{personModel>/office}" submit="onRegister" placeholder="{i18n>placeHolderOffice}" width="16rem" required="true" />
+                        <Input id="inputPerson" value="{personModel>/person}" submit="onRegister" placeholder="{i18n>placeHolderPerson}" width="16rem" required="true" />
+                        <Input id="inputModule" value="{personModel>/module}" submit="onRegister" placeholder="{i18n>placeHolderModule}" width="16rem" required="true" />
 
-                        <Select id="selectPerson" value="{personModel>/person}" width="16rem" items="" name="">
+                        <!-- <Select id="selectPerson" value="{personModel>/person}" width="16rem" items="" name="">
                             <core:Item key="" text="" />
                             <core:Item key="" text="Interno" />
                             <core:Item key="" text="Externo" />
                             <core:Item key="" text="Outros" />
-                        </Select>
-                        <Select id="selectModule" value="{personModel>/module}" width="16rem" items="" name="">
+                        </Select> -->
+                        <!-- <Select id="selectModule" value="{personModel>/module}" width="16rem" items="" name="">
                             <core:Item key="" text="" />
                             <core:Item key="" text="SD" />
                             <core:Item key="" text="FI" />
@@ -49,7 +51,7 @@
                             <core:Item key="" text="LE" />
                             <core:Item key="" text="CS" />
                             <core:Item key="" text="RE" />
-                        </Select>
+                        </Select> -->
 
                         <Input id="inputProject" value="{personModel>/project}" type="text" submit="onRegister" placeholder="{i18n>placeHolderProject}" width="16rem" required="true" />
 
